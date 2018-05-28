@@ -1,0 +1,34 @@
+<HTML>
+<HEAD><TITLE> CLOCKSPACE </TITLE>
+	<style type="twice/css">
+		div{font-size:22px; border:ridge 6px #FFEEEE; color:WHITE; background-color:pink}
+			a{color:WHITE; text-decoration:none}
+			table{border:ridge 6px #FFEEEE}
+			th{font-size:30px; color:#FFEEEE; backgroundcolor:pink}
+	</style>
+	<script>
+		function startTime() 
+				{
+    				 var today = new Date();
+   				 var h = today.getHours();
+   				 var m = today.getMinutes();
+   				 var s = today.getSeconds();
+   				 m = checkTime(m);
+  				 s = checkTime(s);
+    				 document.getElementById('clock').innerHTML =
+    				 h + ":" + m + ":" + s;
+    				 var t = setTimeout(startTime, 500);
+				 }
+				function checkTime(i) 
+				{
+    					if (i < 10) {i = "0" + i};
+    					return i;
+				}
+	</script>
+</HEAD>
+
+<body onload="startTime()" bgcolor=lightpink>
+<div id="clock"></div>
+</body>
+
+</HTML>
