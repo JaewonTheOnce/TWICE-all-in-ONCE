@@ -1,10 +1,67 @@
-﻿<HTML>
+<HTML>
 <HEAD><TITLE> CONTENT </TITLE></HEAD>
+
+<meta charset="utf-8"> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> 
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script> 
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+<script> 
+$(document).ready(function(){ 
+    var main = $(".bxslider").bxSlider({ 
+    mode: "fade", 
+    auto: true,	 
+    controls : true,		
+    autoControls: true,	
+    pager:true,	
+    pause: 3000, 
+    autoDelay: 0,	
+    slideWidth: 800,
+    speed: 500, 
+    stopAutoOnclick:true 
+}); 
+   
+$(".bx-stop").click(function(){	
+    main.stopAuto(); 
+    $(".bx-stop").hide(); 
+    $(".bx-start").show(); 
+    return false; 
+}); 
+
+$(".bx-start").click(function(){	
+    main.startAuto(); 
+    $(".bx-start").hide(); 
+    $(".bx-stop").show(); 
+    return false; 
+}); 
+
+  $(".bx-start").hide();	 
+}); 
+</script> 
+
+
+
 <BODY bgcolor=#FFF3FE>
 	<CENTER>
 		<H3>모든 트와이스의 노래를 들을 수 있는 사이트입니다.</H3>
 		<H4>현재 모든 곡을 업로드하지 못했습니다. 업로드 중입니다.</H4>
 		<IMG src="쯔위1.gif" alighn=middle>
 	</CENTER>
+
+<p>twice</p>
+
+<div class="home__slider"> 
+    <div class="bxslider"> 
+        <div><img src="나연.jpg" alighn=middle></div>
+        <div><img src="정연.jpg"></div>
+        <div><img src="모모.jpg"></div>
+        <div><img src="사나.jpg"></div>
+	<div><img src="미나.jpg"></div>
+	<div><img src="지효.jpg"></div>
+	<div><img src="다현.jpg"></div>
+	<div><img src="채영.jpg"></div>
+	<div><img src="쯔위.jpg"></div>
+    </div> 
+</div> 
+
 </BODY>
 </HTML>
